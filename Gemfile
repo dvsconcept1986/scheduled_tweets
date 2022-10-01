@@ -63,3 +63,7 @@ gem "omniauth-rails_csrf_protection", "~> 1.0"
 gem "twitter", "~> 7.0"
 
 gem "sidekiq", "~> 6.5"
+
+group :production do
+  gem "pg", "~> 1.4"
+end
