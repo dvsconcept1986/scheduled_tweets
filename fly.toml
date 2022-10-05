@@ -9,9 +9,11 @@ processes = []
   [build.args]
     BUILD_COMMAND = "bin/rails fly:build"
     SERVER_COMMAND = "bin/rails fly:server"
+    RUBY_VERSION = "3.0.4"
+    BUNDLER_VERSION = "2.2.33"
 
 [deploy]
-  release_command = "bin/rails fly:release"
+  release_command = "bin/rails db:migrate fly:release"
 
 [env]
   PORT = "8080"
